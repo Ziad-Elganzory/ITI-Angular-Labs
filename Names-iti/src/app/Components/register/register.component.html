@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 mx-auto my-4 d-flex flex-column align-items-center">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Name</span>
+                <input type="text" [(ngModel)]="name" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+              </div>      
+            @if(name.length < 3 && name){
+                <div style="color: red; font-weight: bold;">Student Name Must Be More Than 3 characters!</div>
+            }@else if(name){
+                <div style="color: green; font-weight: bold;">Valid Student Name</div>
+            }
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Age</span>
+                <input type="text" [(ngModel)]="age" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+              </div> 
+            @if(+age < 10 && +age){
+                <div style="color: red; font-weight: bold;">Student Age Must Be More Than 3 Years!</div>
+            }@else if(age){
+                <div style="color: green; font-weight: bold;">Valid Student Age</div>
+            }
+            <input type="button"class="btn btn-primary btn-lg" (click)="Send()" value="Send" >
+        </div>
+    </div>
+</div>

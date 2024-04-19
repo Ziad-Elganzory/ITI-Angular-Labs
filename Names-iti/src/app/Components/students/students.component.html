@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4 mx-auto my-4 d-flex flex-column align-items-center">
+            <table class="table">
+                <thead class="table-light text-white bg-dark">
+                    <th>Name</th>
+                    <th>Age</th>
+                </thead>
+                <tbody>
+                    @for(std of FromParent; track std.Name ){
+                        <tr>
+                            <td>{{std.Name}}</td>
+                            <td>{{std.Age}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
